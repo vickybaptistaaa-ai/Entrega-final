@@ -5,15 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gálvez GP | Entradas Fórmula 1 Argentina</title>
 
-  <!-- Bootstrap 5 (CSS) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- CSS propio (siempre después de Bootstrap para poder sobrescribirlo) -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===================== NAVBAR ===================== -->
   <nav class="navbar navbar-expand-md">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#inicio">
@@ -21,7 +18,6 @@
         <span class="marca-texto">GÁLVEZ GP</span>
       </a>
 
-      <!-- Botón hamburguesa (pantallas chicas) -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -32,7 +28,7 @@
           <li class="nav-item"><a class="nav-link" href="#agenda">Agenda</a></li>
           <li class="nav-item"><a class="nav-link" href="#circuito">El circuito</a></li>
           <li class="nav-item ms-2 my-2">
-            <!-- Botón que abre el modal -->
+            
             <button type="button" class="btn btn-rojo btn-chico" data-bs-toggle="modal" data-bs-target="#modalEntradas">
               Conseguí tu entrada ↗
             </button>
@@ -42,7 +38,6 @@
     </div>
   </nav>
 
-  <!-- ===================== HEADER ===================== -->
   <header id="inicio" class="hero">
     <div class="container py-5 text-center">
       <p class="etiqueta-hero mb-4">
@@ -77,24 +72,20 @@
     </div>
   </header>
 
-  <!-- ===================== MAIN ===================== -->
   <main>
 
-    <!-- Sección 1: Tarjetas con grilla de Bootstrap (render dinámico con fetch) -->
     <section id="experiencia" class="py-5">
       <div class="container py-4">
         <p class="etiqueta-seccion">Elegí cómo vivirla</p>
         <h2 class="titulo-seccion mb-3">Tu lugar en <span class="resaltado">la pista.</span></h2>
         <p class="texto-seccion mb-5">Tres sectores, tres formas de sentir la carrera. Todos con ingreso a los tres días de actividad.</p>
 
-        <!-- Acá JavaScript inyecta las tarjetas leídas desde data/data.json -->
         <div class="row row-cols-1 row-cols-md-3 g-3" id="contenedor-entradas">
           <div class="col"><p class="texto-seccion">Cargando entradas...</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Sección 2: La agenda -->
     <section id="agenda" class="py-5">
       <div class="container py-4">
         <div class="row align-items-end mb-4">
@@ -177,7 +168,6 @@
       </div>
     </section>
 
-    <!-- Sección 3: El circuito (imagen a la izquierda con row/col, derecha con flexbox) -->
     <section id="circuito" class="py-5">
       <div class="container py-4">
         <div class="row g-4 align-items-center">
@@ -222,7 +212,6 @@
       </div>
     </section>
 
-    <!-- Banner final de venta -->
     <section class="pb-5">
       <div class="container">
         <div class="banner-entradas px-4 py-5">
@@ -246,12 +235,11 @@
 
   </main>
 
-  <!-- ===================== FOOTER ===================== -->
   <footer class="pie py-4">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-center">
         <a class="navbar-brand d-flex align-items-center mb-2" href="#inicio">
-          <span class="marca-logo me-2">G</span>
+          <span class="marca-logo me-2">:)</span>
           <span class="marca-texto">GÁLVEZ GP</span>
         </a>
         <p class="pie-lema mb-2">Buenos Aires despierta cuando arrancan los motores.</p>
@@ -262,13 +250,11 @@
         </div>
       </div>
       <p class="pie-aviso mt-4 mb-0">
-        Proyecto académico. Sitio ficticio: las fechas, los precios y la venta de entradas son ilustrativos
-        y no tienen vínculo oficial con la Fórmula 1 ni con el Autódromo.
+        Entrega final web!!
       </p>
     </div>
   </footer>
 
-  <!-- ===================== MODAL CON FORMULARIO ===================== -->
   <div class="modal" id="modalEntradas" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -279,7 +265,6 @@
 
         <div class="modal-body">
           <form id="formEntradas" class="needs-validation" novalidate action="https://api.web3forms.com/submit" method="POST">
-            <!-- Clave pública de Web3Forms -->
             <input type="hidden" name="access_key" value="b393cb88-07c7-4113-8d32-ae8b2f645e9b">
 
             <div class="mb-3">
@@ -349,10 +334,8 @@
     </div>
   </div>
 
-  <!-- Bootstrap 5 (JavaScript) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- JavaScript propio -->
   <script src="js/script.js"></script>
 </body>
 </html>
