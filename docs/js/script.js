@@ -1,9 +1,4 @@
-// ==========================================================
-// GÁLVEZ GP · JavaScript
-// ==========================================================
 
-// ---------- 1. Entradas: se leen desde data/data.json con fetch ----------
-// (la ruta es relativa al HTML: index.html)
 function cargarEntradas() {
   fetch('data/data.json')
     .then(res => res.json())
@@ -11,7 +6,6 @@ function cargarEntradas() {
       let contenedor = document.getElementById('contenedor-entradas');
       let htmlAcumulado = '';
 
-      // Se arma una tarjeta por cada objeto del array
       datos.forEach(item => {
         htmlAcumulado += `<div class="col">`;
         htmlAcumulado += `  <div class="tarjeta-entrada border h-100 d-flex flex-column justify-content-between p-4">`;
@@ -28,7 +22,6 @@ function cargarEntradas() {
         htmlAcumulado += `</div>`;
       });
 
-      // Se inyecta todo junto en el DOM
       contenedor.innerHTML = htmlAcumulado;
     })
     .catch(error => {
@@ -38,10 +31,8 @@ function cargarEntradas() {
     });
 }
 
-// Se ejecuta apenas carga la página
 cargarEntradas();
 
-// ---------- 2. Validación del formulario con Bootstrap ----------
 const forms = document.querySelectorAll('.needs-validation');
 
 forms.forEach((form) => {
